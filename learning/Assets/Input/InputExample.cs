@@ -50,13 +50,17 @@ public class InputExample : MonoBehaviour {
 		}
 	}
 
-	// Input.GetButton
-	// 返回 true 当某个虚拟按键被按着
+	// Input.GetButton 返回 true 当某个虚拟按键被按着
+	// Input.GetButtonDown 返回 true 当某个虚拟按键被按下
 	void Test_Button()
 	{
 		// Fire1 对应摇杆0号键或鼠标左键
-		if (Input.GetButton ("Fire1")) {
+		/* if (Input.GetButton ("Fire1")) {
 			Debug.Log ("[GetButton] Fire1");
+		} */
+
+		if (Input.GetButtonDown("Fire1")) {
+			Debug.Log("[GetButtonDown] Fire1");
 		}
 	}
 
@@ -80,8 +84,6 @@ public class InputExample : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		//Test_GetAxis ();
-		//Test_按键();
-		//Test_虚拟按键();
+		Test_Button();
 	}
 }
